@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+<body>
+    <h1>Basic Video Player</h1>
+    <video id="videoPlayer" src="./17261761-hd_1080_1920_60fps.mp4" style="width:1000px; height: 500px;"></video>
+    <br>
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="stopVideo()">Stop</button>
+    <button onclick="muteUnmute()">Mute/Unmute</button>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+
+        // play/pause function
+
+        function playPause() {
+            if(video.paused) {
+                video.play();
+            } else {
+                video.pause()
+            }
+        }
+
+        // stop funtion
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        // mute/unmute function
+
+        function muteUnmute(){
+            if(video.muted) {
+                video.muted = false;
+            } else {
+                video.muted = true;
+            }
+        }
+    </script>
+</body>
+</html>
